@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.2/dist/mini-default.min.css">
+<title>Conditionals</title>
+</head>
+<body>
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Use Conditional Logic with If Statements</h2><hr>
+    <p><code>if</code> statements are used to make decisions in code. The keyword <code>if</code> tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as <strong>Boolean</strong> conditions because they may only be <code>true</code> or <code>false</code>. For example:</p>
+    <pre>if(num &gt; 0) {
+  console.log("Greater than zero.");
+}</pre>
+    <p>When the condition evaluates to <code>true</code>, the program executes the statement inside the curly braces. When the Boolean condition evaluates to <code>false</code>, the statement inside the curly braces will not execute. For example:</p>
+    <br />
+
+    <h2>Introducing Else Statements</h2><hr>
+    <p>When a condition for an <code>if</code> statement is <code>true</code>, the block of code following it is executed. What about when that condition is <code>false</code>?  Normally nothing would happen. With an <code>else</code> statement, an alternate block of code can be executed.</p>
+    <pre>if (num &gt; 10) {
+  console.log("Bigger than 10");
+} else {
+  console.log("10 or Less");
+}</pre>
+    <br />
+
+    <h2>Selecting from many options with Switch Statements</h2><hr>
+    <p>If you have many options to choose from, use a <code>switch</code> statement. A <code>switch</code> statement tests a value and can have many <code>case</code> statements which defines various possible values. Statements are executed from the first matched <code>case</code> value until a <code>break</code> is encountered. For example:</p>
+    <pre>switch(num) {
+  case 1:
+    console.log("1");
+    break;
+  case 2:
+    console.log("2");
+    break;
+}</pre>
+    <p><code>case</code> values are tested with strict equality (<code>===</code>). The <code>break</code> tells JavaScript to stop executing statements. If the <code>break</code> is omitted, the next statement will be executed.</p>
+    <br />
+
+    <h2>Adding a default option in Switch statements</h2><hr>
+    <p>In a <code>switch</code> statement you may not be able to specify all possible values as <code>case</code> statements. Instead, you can add the <code>default</code> statement which will be executed if no matching <code>case</code> statements are found. Think of it like the final <code>else</code> statement in an <code>if/else</code> chain. A <code>default</code> statement should be the last case. For example: </p>
+    <pre>switch(num) {
+  case 1:
+    console.log("One");
+    break;
+  case 2:
+    console.log("Two");
+    break;
+  default:
+    console.log("Not one or two");
+}</pre>
+    <br />
+
+    <h2>Comparisons with Logical Operators</h2><hr>
+    <p>Sometimes you will need to test more than one thing at a time. The <strong>logical AND</strong> operator (<code>&amp;&amp;</code>) returns <code>true</code> if and only if the <strong>operands</strong> to the left and right of it are true. The same effect could be achieved by nesting an if statement inside another if:</p>
+    <pre>if (num &gt; 5) {
+  if (num &lt; 10) {
+    console.log("Yes");
+}</pre>
+    <p>The above code will only print <em>Yes</em> if <code>num</code> is between <code>6</code> and <code>9</code> (6 and 9 included). The same logic can be written as:</p>
+    <pre>if (num &gt; 5 &amp;&amp; num &lt; 10) {
+  console.log("Yes");
+}</pre>
+    <p>The <strong>logical OR</strong> operator (<code>||</code>) returns <code>true</code> if either of the <strong>operands</strong> is <code>true</code>. Otherwise, it returns <code>false</code>. The same effect could be achieved using multiple iif statements:</p>
+    <pre>if (num &gt; 10) {
+  console.log("No");
+}
+if (num &lt; 5) {
+  console.log("No");
+}</pre>
+    <p>The above code will print <em>No</em> only if <code>num</code> is below <code>5</code> or above <code>10</code>. The same logic can be written as:</p>
+    <pre>if (num &gt; 10 || num &lt; 5) {
+  console.log("No");
+</pre>
+  </div></div></div>
+</body>
+</html>

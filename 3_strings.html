@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.2/dist/mini-default.min.css">
+<title>Strings</title>
+</head>
+<body>
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Declare String Variables</h2><hr>
+    <p>Previously we have used the following code:</p>
+    <pre>var myName = "your name";</pre>
+    <p><code>"your name"</code> is called a <strong>string literal</strong>. It is a string because it is a series of zero or more characters enclosed in single or double quotes.</p>
+    <br/>
+
+    <h2>Concatenating Strings with Plus Operator</h2><hr>
+    <p>In JavaScript, when the <code>+</code> operator is used with a <strong>String</strong> value, it is called the <strong>concatenation</strong> operator. You can build a new string out of other strings by <strong>concatenating</strong> them together. For example:</p>
+    <pre>'My name is Alan,' + ' I concatenate.'</pre>
+    <p>Remember to watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.</p>
+    <br />
+
+    <h2>Find the Length of a String</h2><hr>
+    <p>You can find the length of a <strong>String</strong> value by writing <code>.length</code> after the string variable or string literal.</p>
+    <pre>"Alan Peter".length; // 10</pre>
+    <p>For example, if we created a variable <code>var firstName = "Charles"</code>, we could find out how long the string <code>"Charles"</code> is by using the <code>firstName.length</code> property.</p>
+    <br />
+
+    <h2>Use Bracket Notation to Find a Character in a String</h2><hr>
+    <p><strong>Bracket notation</strong> is a way to get a character at a specific <strong>index</strong> within a string.</p>
+    <p>Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at <code>0</code>. This is referred to as <strong>zero-based</strong> indexing.</p>
+    <p>For example, the character at index 0 in the word "Charles" is "C". So if <code>var firstName = "Charles"</code>, you can get the value of the first letter of the string by using <code>firstName[0]</code>.</p>
+    <p>You can also use <strong>bracket notation</strong> to get the character at other positions within a string. For example:</p>
+    <pre>"Charles"[2] // "a"</pre>
+    <br />
+  </div></div></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.2/dist/mini-default.min.css">
+<title>Arrays</title>
+</head>
+<body>
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Store Multiple Values in one Variable using JavaScript Arrays</h2><hr>
+    <p>With JavaScript <strong>array</strong> variables, we can store several pieces of data in one place. You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this: </p>
+    <pre>var sandwich = ["peanut butter", "jelly", "bread"]</pre>
+    <br />
+
+    <h2>Access Array Data with Indexes</h2><hr>
+    <p>We can access the data inside arrays using <strong>indexes</strong>. Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use <strong>zero-based</strong> indexing, so the first element in an array is element <code>0</code>. For example:</p>
+    <pre>var array = [1,2,3];
+array[0]; // equals 1
+var data = array[1];  // equals 2</pre>
+    <br />
+
+    <h2>Modify Array Data With Indexes</h2><hr>
+    <p>Unlike strings, the entries of arrays are <strong>mutable</strong> and can be changed freely. For example:</p>
+    <pre>var ourArray = [3,2,1];
+ourArray[0] = 1; // equals [1,2,1]</pre>
+    <br />
+
+    <h2>Manipulate Arrays With push</h2><hr>
+    <p>An easy way to <strong>append</strong> data to the end of an array is via the <code>.push()</code> function.</p>
+    <p><code>.push()</code> takes one or more <strong>parameters</strong> and <em>pushes</em> them onto the end of the array. For example:</p>
+    <pre>var arr = [1,2,3];
+arr.push(4);
+// arr is now [1,2,3,4]</pre>
+    <br />
+
+    <h2>Manipulate Arrays With pop</h2><hr>
+    <p>Another way to change the data in an array is with the <code>.pop()</code> function.</p>
+    <p><code>.pop()</code> is used to <em>pop</em> a value off of the end of an array. We can store this <em>popped off</em> value by assigning it to a variable. >Any type of entry can be <em>popped</em> off of an array - numbers, strings, even nested arrays. For example:</p>
+    <pre>var oneDown = [1, 4, 6].pop();</pre>
+    <p>In the above coe, the variable <code>oneDown</code> now holds the value <code>6</code> and the array becomes <code>[1, 4]</code>.</p>
+  </div></div></div>
+</body>
+</html>

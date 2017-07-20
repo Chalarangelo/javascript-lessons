@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.2/dist/mini-default.min.css">
+<title>Loops</title>
+</head>
+<body>
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+    <h2>Iterate with JavaScript For Loops</h2><hr>
+    <p>You can run the same code multiple times by using a <strong>loop</strong>. The most common type of JavaScript loop is called a <strong>for loop</strong> because it runs <em>for</em> a specific number of times. For loops are declared with three optional expressions separated by semicolons:</p>
+    <pre>for ([initialization]; [condition]; [final-expression])</pre>
+    <p>The <strong>initialization</strong> statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.</p>
+    <p>The <strong>condition</strong> statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to <code>true</code>. When <strong>condition</strong> is <code>false</code> at the start of the iteration, the loop will stop executing. This means if <strong>condition</strong> starts as <code>false</code>, your loop will never execute.</p>
+    <p>The <strong>final-expression</strong> is executed at the end of each loop iteration, prior to the next <strong>condition</strong> check and is usually used to increment or decrement your loop counter.</p>
+    <p>In the following example we initialize with <code>i = 0</code> and iterate while our condition <code>i &lt; 5</code> is true. We'll increment <code>i</code> by <code>1</code> in each loop iteration with <code>i++</code> as our <strong>final-expression</strong>.</p>
+    <pre>var ourArray = [];
+for (var i = 0; i &lt; 5; i++) {
+  ourArray.push(i);
+}
+// The array now contains [0,1,2,3,4]</pre>
+    <br />
+
+    <h2>Iterate Through an Array with a For Loop</h2><hr>
+    <p>A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a <code>for</code> loop. This code will output each element of the array <code>arr</code> to the console:</p>
+    <pre>var arr = [10,9,8,7,6];
+for (var i=0; i &lt; arr.length; i++) {
+  console.log(arr[i]);
+}</pre>
+    <p>Remember that arrays have zero-based numbering, which means the last index of the array is <code>length - 1</code>. Our <strong>condition</strong> for this loop is <code>i &lt; arr.length</code>, which stops when <code>i</code> is at length - 1.</p>
+    <br />
+
+    <h2>Iterate with JavaScript While Loops</h2><hr>
+    <p>Another type of JavaScript loop is called a <strong>while loop</strong>, because it runs <em>while</em> a specified condition is true and stops once that condition is no longer true.</p>
+    <pre>var ourArray = [];
+var i = 0;
+while(i &lt; 5) {
+  ourArray.push(i)
+  i++;
+}
+// The array now contains [0,1,2,3,4]</pre>
+  </div></div></div>
+</body>
+</html>
