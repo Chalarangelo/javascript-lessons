@@ -3,9 +3,20 @@
 <head>
 <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.2/dist/mini-default.min.css">
 <title>Comments</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="./favicon.png">
+<style>mark.JS{background: #f0db4f; color: #323232; font-weight: 700; margin-left: 0.5rem; padding: 0.125rem 0.25em;}
+.container{height: calc(100vh - 48px); overflow: auto; overflow-x: hidden}
+header a#back-button svg { vertical-align: middle;}
+header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
+  left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
+header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+</style>
 </head>
 <body>
-<div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+  <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
     <h2>Comment your JavaScript Code</h2><hr>
     <p>Comments are lines of code that JavaScript will intentionally ignore. Comments are a great way to leave notes to yourself and to other people who will later need to figure out what that code does.</p>
     <p>There are two ways to write comments in JavaScript:</p>
@@ -15,7 +26,7 @@
     <pre>/* This is a
    multi-line comment */</pre><p>
     <h3>Best practice</h3>
-    <p>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code—both for others <em>and</em> for your future self.</p>
+    <p>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code - both for others <em>and</em> for your future self.</p>
   </div></div></div>
   <script src="0_comments.js"></script>
 </body>
