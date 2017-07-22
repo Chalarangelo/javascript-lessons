@@ -12,11 +12,18 @@ header a#back-button svg { vertical-align: middle;}
 header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
   left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
 header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+@media screen and (min-width:768px){ .col-sm-12 { height: calc(100vh - 48px); overflow: auto; overflow-x: hidden} .col-sm-12 + .col-sm-12 {border-left: 1px solid #c9c9c9; }}
+.card.fluid.rounded{border: none; margin-top: 1.25rem;}
+input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, monospace; margin: 0.5rem; border: 1px solid #212121; }
+.input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
+p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
+div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
+iframe { margin: 0.5rem}
 </style>
 </head>
 <body>
   <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
-  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-6">
     <h2>Use Conditional Logic with If Statements</h2><hr>
     <p><code>if</code> statements are used to make decisions in code. The keyword <code>if</code> tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as <strong>Boolean</strong> conditions because they may only be <code>true</code> or <code>false</code>. For example:</p>
     <pre>if(num &gt; 0) {
@@ -81,8 +88,28 @@ if (num &lt; 5) {
     <p>The above code will print <em>No</em> only if <code>num</code> is below <code>5</code> or above <code>10</code>. The same logic can be written as:</p>
     <pre>if (num &gt; 10 || num &lt; 5) {
   console.log("No");
-</pre>
-  </div></div></div>
+}</pre>
+    <div class="read-further">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
+      <ul>
+        <li class="js-further"><a href="https://www.w3schools.com/js/js_if_else.asp" target="_blank">Javascript If...Else Statements - W3Schools</a></li>
+        <li class="js-further"><a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank">Javascript Comparison &amp; Logical Operators - W3Schools</a></li>
+        <li class="js-p-further"><a href="https://www.w3schools.com/js/js_booleans.asp" target="_blank">Javascript Booleans - W3Schools</a></li>
+        <li class="programming-further"><a href="http://www.cs.utah.edu/~germain/PPS/Topics/conditionals.html" target="_blank">Computer Programming: Conditionals - Tutorials Point</a></li>
+      </ul>
+      <br/>
+    </div>
+    <div class="videos-further">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>&nbsp;&nbsp;Videos</h3>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/VNtYWDpdQ1w?rel=0?ecver=1" frameborder="0" allowfullscreen></iframe>
+      <br/>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/znYh4QRkQ-M?rel=0?ecver=1" frameborder="0" allowfullscreen></iframe>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+  </div>
+</div></div>
   <script src="5_conditionals.js"></script>
 </body>
 </html>

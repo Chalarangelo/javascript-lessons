@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function(event){
   else {
     user = JSON.parse(localStorage.getItem('learn-js-user'));
     if (user['videos'] == 'yes')
-      document.getElementsByTagName('style')[0].innerHTML += "div.videos-further{ display: block;}"
+      document.getElementsByTagName('style')[0].innerHTML += 'div.videos-further{ display: block;}';
     if (user['desiredJsKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += "div.js-further{ display: block;}"
+      document.getElementsByTagName('style')[0].innerHTML += 'div.js-further{ display: block;}';
   }
   window.setTimeout(function(){
     if(user['comments'] == 'available' || user['comments'] == 'restricted')

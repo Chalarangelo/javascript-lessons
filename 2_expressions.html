@@ -12,11 +12,18 @@ header a#back-button svg { vertical-align: middle;}
 header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
   left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
 header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+@media screen and (min-width:768px){ .col-sm-12 { height: calc(100vh - 48px); overflow: auto; overflow-x: hidden} .col-sm-12 + .col-sm-12 {border-left: 1px solid #c9c9c9; }}
+.card.fluid.rounded{border: none; margin-top: 1.25rem;}
+input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, monospace; margin: 0.5rem; border: 1px solid #212121; }
+.input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
+p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
+div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
+iframe { margin: 0.5rem}
 </style>
 </head>
 <body>
   <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
-  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-6">
     <h2>Arithmetic Operations in JavaScript</h2><hr>
     <p><strong>Number</strong> is a data type in JavaScript which represents numeric data. Now let's try to add two numbers using JavaScript.</p>
     <p>JavaScript uses the <code>+</code> symbol as addition operation when placed between two numbers.</p>
@@ -27,7 +34,18 @@ header a#back-button:hover, header a#back-button:focus { background: #323232; co
     <pre>myVar = 13 * 13; // assigned 169</pre>
     <p>We can also divide one number by another. JavaScript uses the <code>/</code> symbol for division.</p>
     <pre>myVar = 16 / 2; // assigned 8</pre>
-  </div></div></div>
+    <div class="js-further">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Expressions_and_Operators" target="_blank">Expressions and Operators - MDN</a></li>
+        <li><a href="http://speakingjs.com/es5/ch07.html" target="_blank">Javascript's Syntax - SpeakingJS</a></li>
+      </ul>
+      <br/>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+  </div>
+</div></div>
   <script src="2_expressions.js"></script>
 </body>
 </html>

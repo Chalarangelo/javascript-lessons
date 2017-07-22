@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function(event){
       document.getElementById('dog-question').className = 'card fluid rounded';
       document.getElementById('cat-question').className = 'card fluid rounded hidden';
     }
+    if (user['videos'] == 'yes')
+      document.getElementsByTagName('style')[0].innerHTML += 'div.videos-further{ display: block;}';
+    if (user['desiredJsKnowledge'] == 'full')
+      document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: block;}';
+    if (user['desiredProgrammingKnowledge'] == 'full')
+      document.getElementsByTagName('style')[0].innerHTML += 'li.programming-further{ display: block;}'
   }
   window.setTimeout(function(){
     if(user['variables'] == 'available' || user['variables'] == 'restricted')

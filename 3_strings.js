@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', function(event){
   }
   else {
     user = JSON.parse(localStorage.getItem('learn-js-user'));
+    if (user['videos'] == 'yes')
+      document.getElementsByTagName('style')[0].innerHTML += 'div.videos-further{ display: block;}';
+    if (user['desiredJsKnowledge'] == 'full' || user['desiredProgrammingKnowledge'] == 'full')
+      document.getElementsByTagName('style')[0].innerHTML += 'div.read-further{ display: block;}';
+    if (user['desiredJsKnowledge'] == 'full')
+      document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: block;}';
+    if (user['desiredProgrammingKnowledge'] == 'full')
+      document.getElementsByTagName('style')[0].innerHTML += 'li.programming-further{ display: block;}';
+    if (user['desiredJsKnowledge'] == 'full' && user['desiredProgrammingKnowledge'] == 'full')
+      document.getElementsByTagName('style')[0].innerHTML += 'li.js-p-further{ display: block;}';
   }
   window.setTimeout(function(){
     if(user['strings'] == 'available' || user['strings'] == 'restricted')

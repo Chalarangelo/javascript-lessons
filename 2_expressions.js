@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function(event){
   }
   else {
     user = JSON.parse(localStorage.getItem('learn-js-user'));
+  if (user['desiredJsKnowledge'] == 'full')
+    document.getElementsByTagName('style')[0].innerHTML += 'div.js-further{ display: block;}';
   }
   window.setTimeout(function(){
     if(user['expressions'] == 'available' || user['expressions'] == 'restricted')
