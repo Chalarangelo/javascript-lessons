@@ -10,12 +10,15 @@
 .container{height: calc(100vh - 48px); overflow: auto; overflow-x: hidden}
 button.primary code {color: #212121;}
 .question { padding-top: 24px; width: 100%; transition: margin-left ease 0.5s; margin-left: 100vw;} .question p { font-size: 1.125rem; padding-bottom: 20px; margin: 8px 16px;} .question button { margin: 8px 16px;}
+nav a, nav a:visited { font-size: 1.125rem; padding-top: 1rem;}
+nav a svg, li svg { vertical-align: bottom; } li { padding-top: 0.5rem;}
+nav a:hover, nav a:focus { opacity: 1; color: #0277bd; }
 </style>
 </head>
 <body>
     <header style="text-align: center;"><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
 <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div id="new-user-questions">
+    <div id="new-user-questions" class="hidden">
       <br />
       <p style="text-align:center; font-size: 1.175em;">Hello and welcome to <strong style="font-size: 1em;">Learn Javascript</strong>, the interactive Javascript lessons that adapt to your personality and learning style to better teach you Javascript.</p>
       <p style="text-align:center; font-size: 1.175em;">Before we can begin, we would like to ask you some questions in order to customize your learning environment for you. Remember to only answer questions that you know the answers to, otherwise press <mark class="secondary">I don't know</mark>.</p><br /><hr /><br />
@@ -95,6 +98,26 @@ button.primary code {color: #212121;}
           <button class="primary" onclick="score(9,'both')">I like both</button>
         </div>
       </div>
+    </div>
+    <div id="existing-user-menu" class="hidden">
+      <nav>
+        <h2 style="text-align:center">Menu</h2>
+        <a href="0_comments.html"><span class="tooltip" id="menu-comments"></span>&nbsp;&nbsp;Comments</a>
+        <a href="1_variables.html"><span class="tooltip" id="menu-variables"></span>&nbsp;&nbsp;Variables</a>
+        <a href="2_expressions.html"><span class="tooltip" id="menu-expressions"></span>&nbsp;&nbsp;Expressions</a>
+        <a href="3_Strings.html"><span class="tooltip" id="menu-strings"></span>&nbsp;&nbsp;Strings</a>
+        <a href="4_arrays.html"><span class="tooltip" id="menu-arrays"></span>&nbsp;&nbsp;Arrays</a>
+        <a href="5_conditionals.html"><span class="tooltip" id="menu-conditionals"></span>&nbsp;&nbsp;Conditionals</a>
+        <a href="6_loops.html"><span class="tooltip" id="menu-loops"></span>&nbsp;&nbsp;Loops</a>
+      </nav>
+      <br/>
+      <p>Explanation of the menu symbols:</p>
+      <ul>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg> - <strong>Available</strong>: The lesson can be viewed and is of appropriate difficulty for you.</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> - <strong>Read</strong>: You have previously viewed or studied this lesson.</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> - <strong>Completed</strong>: You have completed this lessons successfully.</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12" y2="17"></line></svg> - <strong>Restricted</strong>: This lesson can be viewed, but is more advanced than your current knowledge level.</li>
+      </ul>
     </div>
   </div></div></div>
   <script src="index.js"></script>
