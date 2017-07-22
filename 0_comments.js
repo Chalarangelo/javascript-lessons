@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function(event){
     localStorage.setItem('learn-js-user',JSON.stringify(user));
   },5000);
   window.setTimeout(function(){
-      user['comments'] = 'completed';
+    user['comments'] = 'completed';
+    if(user['variables'] == 'restricted')
+      user['variables'] = 'available';
     localStorage.setItem('learn-js-user',JSON.stringify(user));
   },30000);
   document.getElementsByTagName('style')[0].innerHTML += '.custom{background: red;}';

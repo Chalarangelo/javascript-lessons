@@ -12,11 +12,16 @@ header a#back-button svg { vertical-align: middle;}
 header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
   left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
 header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+@media screen and (min-width:768px){ .col-sm-12 { height: calc(100vh - 48px); overflow: auto; overflow-x: hidden} .col-sm-12 + .col-sm-12 {border-left: 1px solid #c9c9c9; }}
+.card.fluid.rounded{border: none; margin-top: 1.25rem;}
+input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, monospace; margin: 0.5rem; border: 1px solid #212121; }
+.input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
+p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
 </style>
 </head>
 <body>
   <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
-  <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
+  <div class="container"><div class="row"><div class="col-sm-12 col-md-6">
   <h2>Declare JavaScript Variables</h2><hr>
   <p>In computer science, <strong>data</strong> is anything that is meaningful to the computer. JavaScript provides seven different <strong>data types</strong> which are <code>undefined</code>, <code>null</code>, <code>boolean</code>, <code>string</code>, <code>symbol</code>, <code>number</code>, and <code>object</code>.</p>
   <p>For example, computers distinguish between numbers, such as the number <code>12</code>, and <strong>strings</strong>, such as <code>"12"</code>, <code>"dog"</code>, or <code>"123 cats"</code>, which are collections of characters. Computers can perform mathematical operations on a number, but not on a string.</p>
@@ -42,7 +47,94 @@ myNum = myVar;</pre>
   <p>It is common to <strong>initialize</strong> a variable to an initial value in the same line as it is declared.</p>
   <pre>var myVar = 0;</pre>
   <p>The above code creates a new variable called <code>myVar</code> and assigns it an initial value of <code>0</code>.</p>
-</div></div></div>
+  <br/>
+</div>
+<div class="col-sm-12 col-md-6">
+  <h2>Questions</h2>
+  <hr>
+  <p>Please, take the time to read the lesson, before you answer these questions.</p>
+  <div class="card fluid rounded">
+    <div class="input-group vertical">
+      <label for="question-0">1. Define a variable, named <code>myVar</code> below:</label>
+      <input id="question-0" type="text" value="" placeholder="// Your code here..." class="input-code">
+      <button class="primary" onclick="checkQuestion(0)">Check answer</button>
+      <p id="question-0-message"></p>
+    </div>
+  </div>
+  <div class="card fluid rounded">
+    <div class="input-group vertical">
+      <label for="question-1">2. Which of the following is the correct way to assign the value <code>7</code> to a variable <code>myNum</code>?</label>
+      <div class="input-group">
+        <input type="radio" id="q1-1" tabindex="0" name="question-1" value="true">
+        <label for="q1-1"><code>myNum = 7;</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q1-2" tabindex="0" name="question-1" value="assign-not-initialize">
+        <label for="q1-2"><code>var myNum = 7;</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q1-3" tabindex="0" name="question-1" value="not-a-number">
+        <label for="q1-3"><code>myNum = "7";</code></label>
+      </div>
+      <button class="primary" onclick="checkQuestion(1)">Check answer</button>
+      <p id="question-1-message"></p>
+    </div>
+  </div>
+  <div class="card fluid rounded">
+    <div class="input-group vertical">
+      <label for="question-2">3. Which of the following is the correct way to assign the contents of the variable <code>a</code> to variable <code>b</code>?</label>
+      <div class="input-group">
+        <input type="radio" id="q2-1" tabindex="0" name="question-2" value="reverse">
+        <label for="q2-1"><code>a = b;</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q2-2" tabindex="0" name="question-2" value="true">
+        <label for="q2-2"><code>b = a;</code></label>
+      </div>
+      <button class="primary" onclick="checkQuestion(2)">Check answer</button>
+      <p id="question-2-message"></p>
+    </div>
+  </div>
+  <div class="card fluid rounded" id="cat-question">
+    <div class="input-group vertical">
+      <label for="question-3">4. Which is the correct way to initialize a variable <code>myCat</code> with the value <code>"Fluffikins"</code>?</label>
+      <div class="input-group">
+        <input type="radio" id="q3-1" tabindex="0" name="question-3" value="initialize-not-assign">
+        <label for="q3-1"><code>myCat = "Fluffikins";</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q3-2" tabindex="0" name="question-3" value="true">
+        <label for="q3-2"><code>var myCat = "Fluffikins";</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q3-3" tabindex="0" name="question-3" value="not-a-string">
+        <label for="q3-3"><code>var myCat = Fluffikins;</code></label>
+      </div>
+      <button class="primary" onclick="checkQuestion(3)">Check answer</button>
+      <p id="question-3-message"></p>
+    </div>
+  </div>
+  <div class="card fluid rounded hidden" id="dog-question">
+    <div class="input-group vertical">
+      <label for="question-4">4. Which is the correct way to initialize a variable <code>myDog</code> with the value <code>"McGruff"</code>?</label>
+      <div class="input-group">
+        <input type="radio" id="q4-1" tabindex="0" name="question-4" value="initialize-not-assign">
+        <label for="q4-1"><code>myDog = "McGruff";</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q4-2" tabindex="0" name="question-4" value="true">
+        <label for="q4-2"><code>var myDog = "McGruff";</code></label>
+      </div>
+      <div class="input-group">
+        <input type="radio" id="q4-3" tabindex="0" name="question-4" value="not-a-string">
+        <label for="q4-3"><code>var myDog = McGruff;</code></label>
+      </div>
+      <button class="primary" onclick="checkQuestion(4)">Check answer</button>
+      <p id="question-4-message"></p>
+    </div>
+  </div>
+</div>
+</div></div>
 <script src="1_variables.js"></script>
 
 </body>
