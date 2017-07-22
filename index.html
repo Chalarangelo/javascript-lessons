@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.2/dist/mini-default.min.css">
 <title>Learn Javascript</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/png" href="./favicon.png">
 <style>mark.JS{background: #f0db4f; color: #323232; font-weight: 700; margin-left: 0.5rem; padding: 0.125rem 0.25em;}
-.container{height: calc(100vh - 48px); overflow: auto;}
-button.primary code {
-  color: #212121;
-}
+.container{height: calc(100vh - 48px); overflow: auto; overflow-x: hidden}
+button.primary code {color: #212121;}
+.question { padding-top: 24px; width: 100%; transition: margin-left ease 0.5s; margin-left: 100vw;} .question p { font-size: 1.125rem; padding-bottom: 20px; margin: 8px 16px;} .question button { margin: 8px 16px;}
 </style>
 </head>
 <body>
@@ -18,75 +19,84 @@ button.primary code {
       <br />
       <p style="text-align:center; font-size: 1.175em;">Hello and welcome to <strong style="font-size: 1em;">Learn Javascript</strong>, the interactive Javascript lessons that adapt to your personality and learning style to better teach you Javascript.</p>
       <p style="text-align:center; font-size: 1.175em;">Before we can begin, we would like to ask you some questions in order to customize your learning environment for you. Remember to only answer questions that you know the answers to, otherwise press <mark class="secondary">I don't know</mark>.</p><br /><hr /><br />
-      <div id="skill-q1">
+      <div id="skill-q1" class="question hidden">
         <p>In computer programming, what is a variable and what is its use?</p>
         <div class="input-group vertical">
-          <button class="primary">Variables are used in mathematical functions to pass values to them</button>
-          <button class="primary">Variables are labelled data containers, used to store and pass values</button>
-          <button class="secondary">I don't know</button>
+          <button class="primary" onclick="score(0,false)">Variables are used in mathematical functions to pass values to them</button>
+          <button class="primary" onclick="score(0,true)">Variables are labelled data containers, used to store and pass values</button>
+          <button class="secondary" onclick="score(0,false)">I don't know</button>
         </div>
       </div>
-      <div id="skill-q2">
+      <div id="skill-q2" class="question hidden">
         <p>In computer programming, what is a String and what is its functionality?</p>
         <div class="input-group vertical">
-          <button class="primary">Strings are a data type used to store alphanumeric values</button>
-          <button class="primary">Strings are a data type used in computer programming</button>
-          <button class="secondary">I don't know</button>
+          <button class="primary" onclick="score(1,true)">Strings are a data type used to store alphanumeric values</button>
+          <button class="primary" onclick="score(1,false)">Strings are a data type used in computer programming</button>
+          <button class="secondary" onclick="score(1,false)">I don't know</button>
         </div>
       </div>
-      <div id="skill-q3">
+      <div id="skill-q3" class="question hidden">
         <p>In computer programming, what kind of data structure is used to store multiple values?</p>
         <div class="input-group vertical">
-          <button class="primary">An array, list, linked list or similar can be used</button>
-          <button class="primary">More than one vales can be stored individually</button>
-          <button class="secondary">I don't know</button>
+          <button class="primary" onclick="score(2,true)">An array, list, linked list or similar can be used</button>
+          <button class="primary" onclick="score(2,false)">More than one vales can be stored individually</button>
+          <button class="secondary" onclick="score(2,false)">I don't know</button>
+        </div>
       </div>
-      <div id="skill-q4">
+      <div id="skill-q4" class="question hidden">
         <p>In computer programming, how does one implement decision-making, effectively branching code execution?</p>
         <div class="input-group vertical">
-          <button class="primary">Using conditionals</button>
-          <button class="primary">By creating a new code branch</button>
-          <button class="secondary">I don't know</button>
+          <button class="primary" onclick="score(3,true)">Using conditionals</button>
+          <button class="primary" onclick="score(3,false)">By creating a new code branch</button>
+          <button class="secondary" onclick="score(3,false)">I don't know</button>
+        </div>
       </div>
-      <div id="skill-q5">
+      <div id="skill-q5" class="question hidden">
         <p>In computer programming, how can repetitive tasks be automated?</p>
         <div class="input-group vertical">
-          <button class="primary">By using a loop</button>
-          <button class="primary">By writing more code that does the same thing multiple times</button>
-          <button class="secondary">I don't know</button>
+          <button class="primary" onclick="score(4,false)">By writing more code that does the same thing multiple times</button>
+          <button class="primary" onclick="score(4,true)">By using a loop</button>
+          <button class="secondary" onclick="score(4,false)">I don't know</button>
+        </div>
       </div>
-      <div id="preference-q1">
+      <div id="preference-q1" class="question hidden">
         <p>Do you want an in-depth understanding of Javascript or just get to know some basics?</p>
         <div class="input-group vertical">
-          <button class="primary">I want to learn the basics</button>
-          <button class="primary">I want to learn as much as possible</button>
+          <button class="primary" onclick="score(5,false)">I want to learn the basics</button>
+          <button class="primary" onclick="score(5,true)">I want to learn as much as possible</button>
+        </div>
       </div>
-      <div id="preference-q2">
+      <div id="preference-q2" class="question hidden">
         <p>Do you want to learn more about underlying programming concepts and structures or just some common core concepts that apply to Javascript?</p>
         <div class="input-group vertical">
-          <button class="primary">I want to learn the basics</button>
-          <button class="primary">I want to learn as much as possible</button>
+          <button class="primary" onclick="score(6,false)">I want to learn the basics</button>
+          <button class="primary" onclick="score(6,true)">I want to learn as much as possible</button>
+        </div>
       </div>
-      <div id="preference-q3">
+      <div id="preference-q3" class="question hidden">
         <p>Do you have any prior experience with computer programming?</p>
         <div class="input-group vertical">
-          <button class="primary">Yes, I have prior experience with computer programming</button>
-          <button class="primary">No, I have no prior experience with computer programming</button>
+          <button class="primary" onclick="score(7,false)">Yes, I have prior experience with computer programming</button>
+          <button class="primary" onclick="score(7,true)">No, I have no prior experience with computer programming</button>
+        </div>
       </div>
-      <div id="preference-q3">
+      <div id="preference-q4" class="question hidden">
         <p>Do you find video lessons an effective way of learning?</p>
         <div class="input-group vertical">
-          <button class="primary">Yes, I find video lessons effective</button>
-          <button class="primary">No, I find video lessons ineffective</button>
+          <button class="primary" onclick="score(8,true)">Yes, I find video lessons effective</button>
+          <button class="primary" onclick="score(8,false)">No, I find video lessons ineffective</button>
+        </div>
       </div>
-      <div id="preference-q5">
+      <div id="preference-q5" class="question hidden">
         <p>Would you consider yourself a dog or a cat person?</p>
         <div class="input-group vertical">
-          <button class="primary">Dog person</button>
-          <button class="primary">Cat person</button>
-          <button class="primary">I like both</button>
+          <button class="primary" onclick="score(9,'dog')">Dog person</button>
+          <button class="primary" onclick="score(9,'cat')">Cat person</button>
+          <button class="primary" onclick="score(9,'both')">I like both</button>
+        </div>
       </div>
     </div>
   </div></div></div>
+  <script src="index.js"></script>
 </body>
 </html>
