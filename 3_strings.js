@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function(event){
     user = JSON.parse(localStorage.getItem('learn-js-user'));
   }
   window.setTimeout(function(){
-    if(user['comments'] == 'available' || user['comments'] == 'restricted')
-      user['comments'] = 'seen';
+    if(user['strings'] == 'available' || user['strings'] == 'restricted')
+      user['strings'] = 'seen';
     localStorage.setItem('learn-js-user',JSON.stringify(user));
   },5000);
 });
