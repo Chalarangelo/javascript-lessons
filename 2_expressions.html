@@ -44,6 +44,101 @@ iframe { margin: 0.5rem}
     </div>
   </div>
   <div class="col-sm-12 col-md-6">
+    <h2>Questions</h2>
+    <hr>
+    <p>Please, take the time to read the lesson, before you answer these questions.</p>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-0">1. Which of the following symbols is the addition operator?</label>
+        <div class="input-group">
+          <input type="radio" id="q0-1" tabindex="0" name="question-0" value="true">
+          <label for="q0-1"><code>+</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-2" tabindex="0" name="question-0" value="sub">
+          <label for="q0-2"><code>-</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-3" tabindex="0" name="question-0" value="mult">
+          <label for="q0-3"><code>*</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-4" tabindex="0" name="question-0" value="div">
+          <label for="q0-4"><code>/</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(0)">Check answer</button>
+        <p id="question-0-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-1">2. Which of the following symbols is the subtraction operator?</label>
+        <div class="input-group">
+          <input type="radio" id="q1-1" tabindex="0" name="question-1" value="add">
+          <label for="q1-1"><code>+</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-2" tabindex="0" name="question-1" value="true">
+          <label for="q1-2"><code>-</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-3" tabindex="0" name="question-1" value="mult">
+          <label for="q1-3"><code>*</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-4" tabindex="0" name="question-1" value="div">
+          <label for="q1-4"><code>/</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(1)">Check answer</button>
+        <p id="question-1-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-2">3. Which of the following symbols is the multiplication operator?</label>
+        <div class="input-group">
+          <input type="radio" id="q2-1" tabindex="0" name="question-2" value="add">
+          <label for="q2-1"><code>+</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q2-2" tabindex="0" name="question-2" value="sub">
+          <label for="q2-2"><code>-</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q2-3" tabindex="0" name="question-2" value="true">
+          <label for="q2-3"><code>*</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q2-4" tabindex="0" name="question-2" value="div">
+          <label for="q2-4"><code>/</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(2)">Check answer</button>
+        <p id="question-2-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-3">4. Which of the following symbols is the division operator?</label>
+        <div class="input-group">
+          <input type="radio" id="q3-1" tabindex="0" name="question-3" value="add">
+          <label for="q3-1"><code>+</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-2" tabindex="0" name="question-3" value="sub">
+          <label for="q3-2"><code>-</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-3" tabindex="0" name="question-3" value="mult">
+          <label for="q3-3"><code>*</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-4" tabindex="0" name="question-3" value="true">
+          <label for="q3-4"><code>/</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(3)">Check answer</button>
+        <p id="question-3-message"></p>
+      </div>
+    </div>
   </div>
 </div></div>
   <script src="2_expressions.js"></script>

@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 user = {};
 
 function checkQuestion(questionId){
-  var message = '';
   if(questionId == 0){
     var userInput = document.getElementById('question-0').value.trim();
     if(user['variables'] != 'completed'){

@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 user = {};
 
 function checkQuestion(questionId){
-  var message = '';
   if(questionId == 0){
     var userInput = document.querySelector('input[name="question-0"]:checked').value;
     if(user['strings'] != 'completed'){
