@@ -78,7 +78,7 @@ iframe { margin: 0.5rem}
     <pre>if (num &gt; 5 &amp;&amp; num &lt; 10) {
   console.log("Yes");
 }</pre>
-    <p>The <strong>logical OR</strong> operator (<code>||</code>) returns <code>true</code> if either of the <strong>operands</strong> is <code>true</code>. Otherwise, it returns <code>false</code>. The same effect could be achieved using multiple iif statements:</p>
+    <p>The <strong>logical OR</strong> operator (<code>||</code>) returns <code>true</code> if either of the <strong>operands</strong> is <code>true</code>. Otherwise, it returns <code>false</code>. The same effect could be achieved using multiple if statements:</p>
     <pre>if (num &gt; 10) {
   console.log("No");
 }
@@ -111,7 +111,90 @@ if (num &lt; 5) {
     <h2>Questions</h2>
     <hr>
     <p>Please, take the time to read the lesson, before you answer these questions.</p>
-    <!-- Here will be the questions -->
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-0">1. In the following code, will the IF statement be executed?
+        <pre>grade = 10;<br>if(grade > 5) {<br> console.log("Passing grade!");<br>}</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q0-1" tabindex="0" name="question-0" value="true">
+          <label for="q0-1">Yes</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-2" tabindex="0" name="question-0" value="false">
+          <label for="q0-2">No</label>
+        </div>
+        <button class="primary" onclick="checkQuestion(0)">Check answer</button>
+        <p id="question-0-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-1">2. Consider the following code:<pre>if ("fun" == 0) {<br> console.log("I don't know!");<br>} else if ("fun" == "fun") {<br> console.log("Piña colada");<br>} else {<br>  console.log("People are strange!");<br>}</pre> What will be printed to the console?</label>
+        <div class="input-group">
+          <input type="radio" id="q1-1" tabindex="0" name="question-1" value="notEqual">
+          <label for="q1-1"><code>I don't know!</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-2" tabindex="0" name="question-1" value="true">
+          <label for="q1-2"><code>Piña colada</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-3" tabindex="0" name="question-1" value="allFalse">
+          <label for="q1-3"><code>People are strange!</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(1)">Check answer</button>
+        <p id="question-1-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-2">3. Consider the following switch statment:<pre>switch(val) {<br>  case 1:<br>    console.log("alpha");<br>    break;<br>  case 2:<br>    console.log("beta");<br>    break;<br>  case 3:<br>    console.log("gamma");<br>    break;<br>}</pre> If <code>val = 2 </code>, what will be printed to the console?</label>
+        <div class="input-group">
+          <input type="radio" id="q2-1" tabindex="0" name="question-2" value="alpha">
+          <label for="q2-1"><code>alpha</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q2-2" tabindex="0" name="question-2" value="true">
+          <label for="q2-2"><code>beta</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q2-3" tabindex="0" name="question-2" value="gamma">
+          <label for="q2-3"><code>gamma</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(2)">Check answer</button>
+        <p id="question-2-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-3">4. Consider the following code. If today is neither Saturday nor Sunday, will the default statement be executed?<pre>switch (day) {<br>    case 6:<br>      console.log("Today is Saturday");<br>      break;<br>    case 0:<br>      console.log("Today is Sunday");<br>      break;<br>    default:<br>      console.log("Looking forward to the Weekend");<br>}</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q3-1" tabindex="0" name="question-3" value="true">
+          <label for="q3-1"><code>Yes</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-2" tabindex="0" name="question-3" value="false">
+          <label for="q3-2"><code>No</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(3)">Check answer</button>
+        <p id="question-3-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-4">5. The following code will print <em>Take the bus!</em><pre>bus = 5;<br>if (bus < 3 || bus > 6 && bus < 8) {<br>  console.log("Take the bus!");<br>}</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q4-1" tabindex="0" name="question-4" value="false">
+          <label for="q4-1">True</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q4-2" tabindex="0" name="question-4" value="true">
+          <label for="q4-2">False</label>
+        </div>
+        <button class="primary" onclick="checkQuestion(4)">Check answer</button>
+        <p id="question-4-message"></p>
+      </div>
+    </div>
   </div>
 </div></div>
   <script src="5_conditionals.js"></script>

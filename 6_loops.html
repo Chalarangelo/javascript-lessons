@@ -16,7 +16,7 @@ header a#back-button:hover, header a#back-button:focus { background: #323232; co
 .card.fluid.rounded{border: none; margin-top: 1.25rem;}
 input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, monospace; margin: 0.5rem; border: 1px solid #212121; }
 .input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
-p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
+p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;} input.numeric-input { margin: 0.5rem auto;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
 </style>
@@ -78,7 +78,76 @@ while(i &lt; 5) {
     <h2>Questions</h2>
     <hr>
     <p>Please, take the time to read the lesson, before you answer these questions.</p>
-    <!-- Here will be the questions -->
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-0">1. Which of the following is the end condition for this for loop? <pre>for (var condition = 0; condition < 5; condition ++) {<br> return condition;<br>}</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q0-1" tabindex="0" name="question-0" value="initialization">
+          <label for="q0-1"><code>condition = 0</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-2" tabindex="0" name="question-0" value="true">
+          <label for="q0-2"><code>condition < 5</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-3" tabindex="0" name="question-0" value="codeBlock">
+          <label for="q0-3"><code>return condition</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-4" tabindex="0" name="question-0" value="finalExpression">
+          <label for="q0-4"><code>condition ++</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(0)">Check answer</button>
+        <p id="question-0-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-1">2. Cosider the following code. After the loop stops executing what does the array <code>workDays</code> equal to ?<pre>var workDays = [];<br>for (var i = 1; i < 6; i++) {<br>  myArray.push(i);<br>}</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q1-1" tabindex="0" name="question-1" value="iteration">
+          <label for="q1-1"><code>[1,2,3,4,5,6]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-2" tabindex="0" name="question-1" value="true">
+          <label for="q1-2"><code>[1,2,3,4,5]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-3" tabindex="0" name="question-1" value="iValue">
+          <label for="q1-3"><code>[0,1,2,3,4,5]</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(1)">Check answer</button>
+        <p id="question-1-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-2">3. Given the following code, what value does the variable <code>total</code> hold?
+        <pre>var myArr = [0, 1, 2, 3, 4, 5];<br>var total = 0;<br>for (var i = 0; i < 5; i++) {<br>  total += myArr[i];<br>}</pre></label>
+          <input id="question-2" type="number" value="" placeholder="0" class="numeric-input">
+          <button class="primary" onclick="checkQuestion(2)">Check answer</button>
+          <p id="question-2-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-3">4. Cosider the following code. After the loop stops executing what does the array <code>myArray</code> equal to ?<pre>var myArray = ["Simple","as"];<br>var i = 1;<br>while(i < 4) {<br>  myArray.push(i);<br>  i++;<br>}</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q3-1" tabindex="0" name="question-3" value="iteration">
+          <label for="q3-1"><code>["Simple","as",1,2,3,4]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-2" tabindex="0" name="question-3" value="append">
+          <label for="q3-2"><code>[1,2,3]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-3" tabindex="0" name="question-3" value="true">
+          <label for="q3-3"><code>["Simple","as",1,2,3]</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(3)">Check answer</button>
+        <p id="question-3-message"></p>
+      </div>
+    </div>
   </div>
 </div></div>
   <script src="6_loops.js"></script>

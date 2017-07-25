@@ -52,7 +52,7 @@ arr.push(4);
 
     <h2>Manipulate Arrays With pop</h2><hr>
     <p>Another way to change the data in an array is with the <code>.pop()</code> function.</p>
-    <p><code>.pop()</code> is used to <em>pop</em> a value off of the end of an array. We can store this <em>popped off</em> value by assigning it to a variable. >Any type of entry can be <em>popped</em> off of an array - numbers, strings, even nested arrays. For example:</p>
+    <p><code>.pop()</code> is used to <em>pop</em> a value off of the end of an array. We can store this <em>popped off</em> value by assigning it to a variable. Any type of entry can be <em>popped</em> off of an array - numbers, strings, even nested arrays. For example:</p>
     <pre>var oneDown = [1, 4, 6].pop();</pre>
     <p>In the above coe, the variable <code>oneDown</code> now holds the value <code>6</code> and the array becomes <code>[1, 4]</code>.</p>
     <div class="read-further">
@@ -74,7 +74,76 @@ arr.push(4);
     <h2>Questions</h2>
     <hr>
     <p>Please, take the time to read the lesson, before you answer these questions.</p>
-    <!-- Here will be the questions -->
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-0">1. Which is the correct way to initialize an array <code>person</code> so that it contains the string <code>John</code> and the number <code>25</code>?</label>
+        <div class="input-group">
+          <input type="radio" id="q0-1" tabindex="0" name="question-0" value="true">
+          <label for="q0-1"><code>var person = ["John",25];</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-2" tabindex="0" name="question-0" value="no-square-bracket">
+          <label for="q0-2"><code>var person = "John",25;</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q0-3" tabindex="0" name="question-0" value="no-comma">
+          <label for="q0-3"><code>var person = ["John" 25];</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(0)">Check answer</button>
+        <p id="question-0-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-1">2. What is the result of the expressions <code>myArray[1] = "Bob"</code> if <code>myArray</code> is equal to <code>[1,2,1]</code>?</label>
+        <div class="input-group">
+          <input type="radio" id="q1-1" tabindex="0" name="question-1" value="non-zero-indexed">
+          <label for="q1-1"><code>["Bob",2,1]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-2" tabindex="0" name="question-1" value="true">
+          <label for="q1-2"><code>[1,"Bob",1]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q1-3" tabindex="0" name="question-1" value="non-zero-indexed">
+          <label for="q1-3"><code>[1,2,"Bob"]</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(1)">Check answer</button>
+        <p id="question-1-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-2">3. Consider the following code:
+        <pre>var myPun = ["I","scream","for","ice"];<br>myPun.push("cream");</pre>What does the array <code>myPun</code> now equal to?</label>
+        <div class="input-group">
+          <input type="radio" id="q2-1" tabindex="0" name="question-2" value="beginning">
+          <label for="q2-1"><code>["cream","I","scream","for","ice"]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q2-2" tabindex="0" name="question-2" value="true">
+          <label for="q2-2"><code>["I","scream","for","ice","cream"]</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(2)">Check answer</button>
+        <p id="question-2-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded">
+      <div class="input-group vertical">
+        <label for="question-3">4. Consider the following code:
+        <pre>var fibonacci = [1,1,2,3,5,8,13];<br>var oneDown = fibonacci.pop();</pre>What is the value of the variable <code>oneDown</code>?</label>
+        <div class="input-group">
+          <input type="radio" id="q3-1" tabindex="0" name="question-3" value="beginning">
+          <label for="q3-1"><code>1</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q3-2" tabindex="0" name="question-3" value="true">
+          <label for="q3-2"><code>13</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(3)">Check answer</button>
+        <p id="question-3-message"></p>
+      </div>
+    </div>
   </div>
 </div></div>
   <script src="4_arrays.js"></script>
