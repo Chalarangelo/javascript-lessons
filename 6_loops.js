@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function(event){
     if (user['desiredJsKnowledge'] == 'full' || user['desiredProgrammingKnowledge'] == 'full')
       document.getElementsByTagName('style')[0].innerHTML += 'div.read-further{ display: block;}';
     if (user['desiredJsKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: block;}';
+      document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: list-item;}';
     if (user['desiredProgrammingKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += 'li.programming-further{ display: block;}';
+      document.getElementsByTagName('style')[0].innerHTML += 'li.programming-further{ display: list-item;}';
     if (user['desiredJsKnowledge'] == 'full' && user['desiredProgrammingKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += 'li.js-p-further{ display: block;}';
+      document.getElementsByTagName('style')[0].innerHTML += 'li.js-p-further{ display: list-item;}';
   }
   window.setTimeout(function(){
     if(user['loops'] == 'available' || user['loops'] == 'restricted')
