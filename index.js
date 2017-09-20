@@ -44,6 +44,13 @@ function advanceQuestion(){
     }, 10);
   }
   else {
+    var userStereotype = 1000;
+    if (userScore[0]) userStereotype += 50;
+    if (userScore[0] && userScore[1]) userStereotype += 50;
+    if (userScore[0] && userScore[2]) userStereotype += 100;
+    if (userScore[3]) userStereotype += 50;
+    if (userScore[3] && userScore[4]) userStereotype += 50;
+    if (userScore[7]) userStereotype += 50;
     var user = {
       'comments' : 'available',
       'variables' : userScore[0]?'available':'restricted',
@@ -57,6 +64,7 @@ function advanceQuestion(){
       'experience' : userScore[7]?'yes':'no',
       'videos' : userScore[8]?'yes':'no',
       'animal' : userScore[9],
+      'sterotype' : userStereotype
     }
     localStorage.setItem('learn-js-user', JSON.stringify(user));
     location.reload();
