@@ -64,7 +64,26 @@ function advanceQuestion(){
       'experience' : userScore[7]?'yes':'no',
       'videos' : userScore[8]?'yes':'no',
       'animal' : userScore[9],
-      'sterotype' : userStereotype
+      'sterotype' : userStereotype,
+      // Properties needed for lessons etc.
+      'variablesEntryStereotype' : -1,
+      'expressionsEntryStereotype' : -1,
+      'expressionsMistakes' : [0,0,0,0,0,0],
+      'stringsEntryStereotype' : -1,
+      'stringsMistakes' : [0,0,0,0,0],
+      'arraysEntryStereotype' : -1,
+      'arraysMistakes' : [0,0,0,0,0],
+      'conditionalsEntryStereotype' : -1,
+      'conditionalsMistakes' : [0,0,0,0,0],
+      'loopsEntryStereotype' : -1,
+      'loopsMistakes' : [0,0,0,0,0],
+      'chapter1EntryStereotype' : -1,
+      'chapter1Score' : -1,
+      'chapter2EntryStereotype' : -1,
+      'chapter2Score' : -1,
+      'chapter3EntryStereotype' : -1,
+      'chapter3Score' : -1,
+      'reviewEntryStereotype' : -1,
     }
     localStorage.setItem('learn-js-user', JSON.stringify(user));
     location.reload();
