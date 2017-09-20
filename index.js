@@ -64,7 +64,7 @@ function advanceQuestion(){
       'experience' : userScore[7]?'yes':'no',
       'videos' : userScore[8]?'yes':'no',
       'animal' : userScore[9],
-      'sterotype' : userStereotype,
+      'stereotype' : userStereotype,
       // Properties needed for lessons etc.
       'variablesEntryStereotype' : -1,
       'expressionsEntryStereotype' : -1,
@@ -84,6 +84,7 @@ function advanceQuestion(){
       'chapter3EntryStereotype' : -1,
       'chapter3Score' : -1,
       'reviewEntryStereotype' : -1,
+      'reviewScore' : -1
     }
     localStorage.setItem('learn-js-user', JSON.stringify(user));
     location.reload();

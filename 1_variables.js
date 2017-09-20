@@ -5,10 +5,18 @@ document.addEventListener('DOMContentLoaded', function(event){
   }
   else {
     user = JSON.parse(localStorage.getItem('learn-js-user'));
+    if(user['variablesEntryStereotype'] < 0){
+      user['variablesEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user',JSON.stringify(user));
+    }
     if(user['animal'] == 'dog'){
       document.getElementById('dog-question').className = 'card fluid rounded';
       document.getElementById('cat-question').className = 'card fluid rounded hidden';
     }
+    if (user['variablesEntryStereotype'] >= 1250 || user['stereotype'] >= 1250 || user['chapter1Score'] > 60)
+      document.getElementsByTagName('style')[0].innerHTML += 'div.advanced-1250{ display: block;}';
+    if(user['experience'] == 'yes')
+      document.getElementById('variables-explanation').innerHTML = '<p><strong>Variables</strong> allow computers to label and store data, while their labels can be used similarly to the <code>x</code> and <code>y</code> variables you use in mathematics. The only difference between computer and mathematical variables is that computer variables can store any of the seven data types, not just numbers.</p>';
     if (user['videos'] == 'yes')
       document.getElementsByTagName('style')[0].innerHTML += 'div.videos-further{ display: block;}';
     if (user['desiredJsKnowledge'] == 'full')
@@ -138,13 +146,37 @@ function checkQuestion(questionId){
       document.getElementById('question-4-message').className = 'success';
     }
   }
+  else if(questionId == 5){
+    var userInput = document.querySelector('input[name="question-5"]:checked').value;
+    if(user['variables'] != 'completed'){
+      user['variables-question-5'] = userInput;
+      localStorage.setItem('learn-js-user',JSON.stringify(user));
+    }
+    if(userInput == 'not-nan'){
+      document.getElementById('question-5-message').innerHTML = 'No mathematical operation is applied on variable <code>a</code>.';
+      document.getElementById('question-5-message').className = 'failure';
+    }
+    else if(userInput == 'not-zero'){
+      document.getElementById('question-5-message').innerHTML = 'Variable <code>a</code> is not explicitly assigned a value of zero.';
+      document.getElementById('question-5-message').className = 'failure';
+    }
+    else{
+      document.getElementById('question-5-message').innerHTML = 'Correct!';
+      document.getElementById('question-5-message').className = 'success';
+      user['variablesEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user', JSON.stringify(user));
+    }
+  }
   if(typeof user['variables-question-0'] !== 'undefined' && typeof user['variables-question-1'] !== 'undefined'
-  && typeof user['variables-question-2'] !== 'undefined' && typeof user['variables-question-3'] !== 'undefined')
+  && typeof user['variables-question-2'] !== 'undefined' && typeof user['variables-question-3'] !== 'undefined' &&
+  (typeof user['variables-question-5'] !== 'undefined' || user['variablesEntryStereotype'] < 1250) )
     if(user['variables-question-0'] == 'true' && user['variables-question-1'] == 'true'
-    && user['variables-question-2'] == 'true' && user['variables-question-3'] == 'true') {
+    && user['variables-question-2'] == 'true' && user['variables-question-3'] == 'true' &&
+    (user['variables-question-5'] == 'true' || user['variablesEntryStereotype'] < 1250) ) {
       user['variables'] = 'completed';
+      user['stereotype'] += 100;
       if(user['expressions'] == 'restricted')
         user['expressions'] = 'available';
-    localStorage.setItem('learn-js-user',JSON.stringify(user));
+        localStorage.setItem('learn-js-user',JSON.stringify(user));
     }
 }
