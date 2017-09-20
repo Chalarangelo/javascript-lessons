@@ -12,35 +12,18 @@ document.addEventListener('DOMContentLoaded', function(event){
     if (user['videos'] == 'yes')
       document.getElementsByTagName('style')[0].innerHTML += 'div.videos-further{ display: block;}';
     if (user['desiredJsKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: list-item;}';
+      document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: block;}';
     if (user['desiredProgrammingKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += 'li.programming-further{ display: list-item;}';
-    if(typeof user['advancedVariableMaterial'] !== 'undefined' || user['experience'] == 'yes')
-      showAdvancedVariables();
-    if(user['experience'] == 'yes' && user['desiredJsKnowledge'] == 'full')
-      document.getElementsByTagName('style')[0].innerHTML += 'li.experience-js-further{ display: list-item;}';
+      document.getElementsByTagName('style')[0].innerHTML += 'li.programming-further{ display: block;}'
   }
   window.setTimeout(function(){
     if(user['variables'] == 'available' || user['variables'] == 'restricted')
       user['variables'] = 'seen';
     localStorage.setItem('learn-js-user',JSON.stringify(user));
   },5000);
-
 });
 
 user = {};
-
-function showAdvancedVariables(){
-  user['advancedVariableMaterial'] = 'enabled';
-  localStorage.setItem('learn-js-user',JSON.stringify(user));
-  var htmlToRender = '<h2>Variable Scope</h2><hr>';
-  htmlToRender += '<p>Javascript variables are not always visible everywhere in your code. <strong>Variable scope</strong> determines the visiblity of variables. In short, variables can be part of the <strong>global</strong> scope, which makes them visible everywhere or part of a <strong>local</strong> scope, making them visible only inside a function or a block of code.</p>';
-  htmlToRender += '<pre>var globalVar = 1; // Global scope\n{ var localVar = 2; // Local scope }</pre>';
-  htmlToRender += '<p>If you\'d like to learn more on the subject of <strong>variable scope</strong>, we recommend checking out <a href="https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/" target="_blank">Demistifying Javascript Variable Scope and Hoisting</a>.</p><br/>';
-  document.getElementById('variables-advanced').className = '';
-  document.getElementById('variables-advanced').innerHTML = htmlToRender;
-  document.getElementsByTagName('style')[0].innerHTML += 'li.js-further{ display: list-item;}';
-}
 
 function checkQuestion(questionId){
   if(questionId == 0){
