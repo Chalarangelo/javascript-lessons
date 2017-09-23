@@ -19,6 +19,7 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;} input.numeric-input { margin: 0.5rem auto;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
+a.tooltip:hover { opacity: 1}
 </style>
 </head>
 <body>
@@ -39,7 +40,7 @@ for (var i = 0; i &lt; 5; i++) {
     <br />
 
     <h2>Iterate Through an Array with a For Loop</h2><hr>
-    <p>A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a <code>for</code> loop. This code will output each element of the array <code>arr</code> to the console:</p>
+    <p>A common task in JavaScript is to iterate through the contents of an <a class="tooltip bottom" aria-label="View lesson" href="4_arrays.html">array</a>. One way to do that is with a <code>for</code> loop. This code will output each element of the array <code>arr</code> to the console:</p>
     <pre>var arr = [10,9,8,7,6];
 for (var i=0; i &lt; arr.length; i++) {
   console.log(arr[i]);

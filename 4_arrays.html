@@ -19,18 +19,19 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
+a.tooltip:hover { opacity: 1}
 </style>
 </head>
 <body>
   <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
   <div class="container"><div class="row"><div class="col-sm-12 col-md-6">
     <h2>Store Multiple Values in one Variable using JavaScript Arrays</h2><hr>
-    <p>With JavaScript <strong>array</strong> variables, we can store several pieces of data in one place. You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this: </p>
+    <p>With JavaScript <strong>array</strong> <a class="tooltip bottom" aria-label="View lesson" href="1_variables.html">variables</a>, we can store several pieces of data in one place. You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this: </p>
     <pre>var sandwich = ["peanut butter", "jelly", "bread"]</pre>
     <br />
 
     <h2>Access Array Data with Indexes</h2><hr>
-    <p>We can access the data inside arrays using <strong>indexes</strong>. Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use <strong>zero-based</strong> indexing, so the first element in an array is element <code>0</code>. For example:</p>
+    <p>We can access the data inside arrays using <strong>indexes</strong>. Array indexes are written in the same bracket notation that <a class="tooltip bottom" aria-label="View lesson" href="3_strings.html">strings</a> use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use <strong>zero-based</strong> indexing, so the first element in an array is element <code>0</code>. For example:</p>
     <pre>var array = [1,2,3];
 array[0]; // equals 1
 var data = array[1];  // equals 2</pre>
