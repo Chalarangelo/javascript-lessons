@@ -19,6 +19,7 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
+div[class*="advanced-"]{ display: none;}
 </style>
 </head>
 <body>
@@ -34,6 +35,13 @@ iframe { margin: 0.5rem}
     <pre>myVar = 13 * 13; // assigned 169</pre>
     <p>We can also divide one number by another. JavaScript uses the <code>/</code> symbol for division.</p>
     <pre>myVar = 16 / 2; // assigned 8</pre>
+    <br/>
+    <div class="advanced-1100">
+      <h2>The remainder operator</h2><hr>
+      <p>In JavaScript, you can also get the remainder (or <strong>modulo</strong>) of an integer division using the <code>%</code> symbol.</p>
+      <pre>myVar = 11 % 2; // assigned 1</pre>
+      <br/>
+    </div>
     <div class="js-further">
       <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
       <ul>
@@ -137,6 +145,21 @@ iframe { margin: 0.5rem}
         </div>
         <button class="primary" onclick="checkQuestion(3)">Check answer</button>
         <p id="question-3-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded advanced-1100">
+      <div class="input-group vertical">
+        <label for="question-4">5. What is the result of the following operation? <pre>var a = 21 % 10;</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q4-1" tabindex="0" name="question-4" value="true">
+          <label for="q4-1"><code>1</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q4-2" tabindex="0" name="question-4" value="quotient">
+          <label for="q4-2"><code>2</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(4)">Check answer</button>
+        <p id="question-4-message"></p>
       </div>
     </div>
   </div>

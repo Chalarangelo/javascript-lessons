@@ -68,7 +68,7 @@ function advanceQuestion(){
       // Properties needed for lessons etc.
       'variablesEntryStereotype' : -1,
       'expressionsEntryStereotype' : -1,
-      'expressionsMistakes' : [0,0,0,0,0,0],
+      'expressionsMistakes' : [0,0,0,0,0],
       'stringsEntryStereotype' : -1,
       'stringsMistakes' : [0,0,0,0,0],
       'arraysEntryStereotype' : -1,
