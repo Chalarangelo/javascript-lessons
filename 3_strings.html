@@ -19,6 +19,7 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;} input.numeric-input { margin: 0.5rem auto; }
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
+div[class*="advanced-"]{ display: none;} a.tooltip:hover { opacity: 1}
 </style>
 </head>
 <body>
@@ -49,6 +50,13 @@ iframe { margin: 0.5rem}
     <p>You can also use <strong>bracket notation</strong> to get the character at other positions within a string. For example:</p>
     <pre>"Charles"[2] // "a"</pre>
     <br />
+    <div class="advanced-1300">
+      <h2>Concatenating Strings with Variables</h2><hr>
+      <p>Apart from <strong>concatenating</strong> two strings, you can also concatenate a string with any other type of <a class="tooltip bottom" aria-label="View lesson" href="1_variables.html">variable</a> For example:</p>
+      <pre>var age = 25;
+var ageString = "I am " + age + " years old.";</pre>
+      <br/>
+    </div>
     <div class="read-further">
       <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
       <ul>
@@ -146,6 +154,25 @@ iframe { margin: 0.5rem}
         </div>
         <button class="primary" onclick="checkQuestion(4)">Check answer</button>
         <p id="question-4-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded advanced-1300">
+      <div class="input-group vertical">
+        <label for="question-5">5. What is the value of the variable <code>id</code> in the following code? <pre>var id = "20" + 10;</pre></label>
+        <div class="input-group">
+          <input type="radio" id="q5-1" tabindex="0" name="question-5" value="not-addition">
+          <label for="q5-1"><code>"30"</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q5-2" tabindex="0" name="question-5" value="not-a-number">
+          <label for="q5-2"><code>2010</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q5-3" tabindex="0" name="question-5" value="true">
+          <label for="q5-3"><code>"2010"</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(5)">Check answer</button>
+        <p id="question-5-message"></p>
       </div>
     </div>
   </div>

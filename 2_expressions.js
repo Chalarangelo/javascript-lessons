@@ -92,8 +92,8 @@ function checkQuestion(questionId){
     if(user['expressions-question-0'] == 'true' && user['expressions-question-1'] == 'true'
     && user['expressions-question-2'] == 'true' && user['expressions-question-3'] == 'true' &&
     (user['expressions-question-4'] == 'true' || user['expressionsEntryStereotype'] < 1100) ) {
+      if(user['expressions'] != 'completed')  user['stereotype'] += 50;
       user['expressions'] = 'completed';
-      user['stereotype'] += 50;
       if(user['strings'] == 'restricted')
         user['strings'] = 'available';
     localStorage.setItem('learn-js-user',JSON.stringify(user));
