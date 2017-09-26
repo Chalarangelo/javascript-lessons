@@ -19,7 +19,7 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
-a.tooltip:hover { opacity: 1}
+a.tooltip:hover { opacity: 1} div[class*="advanced-"]{ display: none;}
 </style>
 </head>
 <body>
@@ -55,7 +55,21 @@ arr.push(4);
     <p>Another way to change the data in an array is with the <code>.pop()</code> function.</p>
     <p><code>.pop()</code> is used to <em>pop</em> a value off of the end of an array. We can store this <em>popped off</em> value by assigning it to a variable. Any type of entry can be <em>popped</em> off of an array - numbers, strings, even nested arrays. For example:</p>
     <pre>var oneDown = [1, 4, 6].pop();</pre>
-    <p>In the above coe, the variable <code>oneDown</code> now holds the value <code>6</code> and the array becomes <code>[1, 4]</code>.</p>
+    <p>In the above code, the variable <code>oneDown</code> now holds the value <code>6</code> and the array becomes <code>[1, 4]</code>.</p>
+    <br/>
+    <div class="advanced-1250">
+      <h2>Manipulate Arrays With shift</h2><hr>
+      <p><code>pop()</code> always removes the last element of an array. What if you want to remove the first? That's where <code>.shift()</code> comes in. It works just like <code>.pop())</code>, except it removes the first element instead of the last. For example:</p>
+      <pre>var oneDown = [1, 4, 6].shift();</pre>
+      <p>In the above code, the variable <code>oneDown</code> now holds the value <code>1</code> and the array becomes <code>[4, 6]</code>.</p>
+      <br/>
+      <h2>Manipulate Arrays With pop</h2><hr>
+      <p>Not only can you <code>shift</code> elements off of the beginning of an array, you can also <code>unshift</code> elements to the beginning of an array i.e. add elements in front of the array. <code>.unshift()</code> works exactly like <code>.push()</code>, but instead of adding the element at the end of the array, <code>unshift()</code> adds the element at the beginning of the array. For example:</p>
+      <pre>var arr = [1,2,3];
+arr.push(0);
+// arr is now [0,1,2,3]</pre>
+      <br/>
+    </div>
     <div class="read-further">
       <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
       <ul>
@@ -143,6 +157,26 @@ arr.push(4);
         </div>
         <button class="primary" onclick="checkQuestion(3)">Check answer</button>
         <p id="question-3-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded advanced-1300">
+      <div class="input-group vertical">
+        <label for="question-4">5. Consider the following code:
+          <pre> var numbers = [1,2,4].unshift(4);</pre>What is the value of the variable <code>numbers</code>?</label>
+        <div class="input-group">
+          <input type="radio" id="q4-1" tabindex="0" name="question-4" value="not-shift">
+          <label for="q4-1"><code>[1,2]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q4-2" tabindex="0" name="question-4" value="not-at-end">
+          <label for="q4-2"><code>[1,2,4,4]</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q4-3" tabindex="0" name="question-4" value="true">
+          <label for="q4-3"><code>[4,1,2,4]</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(4)">Check answer</button>
+        <p id="question-4-message"></p>
       </div>
     </div>
   </div>

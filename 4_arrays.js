@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function(event){
   }
   else {
     user = JSON.parse(localStorage.getItem('learn-js-user'));
+    if(user['arraysEntryStereotype'] < 0){
+      user['arraysEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user',JSON.stringify(user));
+    }
+    if (user['arraysEntryStereotype'] >= 1250 || user['stereotype'] >= 1250 || user['chapter2Score'] > 60)
+      document.getElementsByTagName('style')[0].innerHTML += 'div.advanced-1250{ display: block;}';
     if (user['videos'] == 'yes')
       document.getElementsByTagName('style')[0].innerHTML += 'div.videos-further{ display: block;}';
     if (user['desiredJsKnowledge'] == 'full' || user['desiredProgrammingKnowledge'] == 'full')
@@ -33,14 +39,28 @@ function checkQuestion(questionId){
     if(userInput == 'no-square-bracket'){
       document.getElementById('question-0-message').innerHTML = 'An array declaration starts with an opening square bracket <code>[</code> and ends with a closing square bracket <code>]</code>.';
       document.getElementById('question-0-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
     else if(userInput == 'no-comma'){
       document.getElementById('question-0-message').innerHTML = 'Between each array entry should be a comma.';
       document.getElementById('question-0-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
     else{
       document.getElementById('question-0-message').innerHTML = 'Correct!';
       document.getElementById('question-0-message').className = 'success';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = -1;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
   }
   else if(questionId == 1){
@@ -52,10 +72,19 @@ function checkQuestion(questionId){
     if(userInput == 'non-zero-indexed'){
       document.getElementById('question-1-message').innerHTML = 'Remember that Javascript uses zero-based indexing.';
       document.getElementById('question-1-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
     else{
       document.getElementById('question-1-message').innerHTML = 'Correct!';
       document.getElementById('question-1-message').className = 'success';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = -1;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
   }
   else if(questionId == 2){
@@ -65,12 +94,21 @@ function checkQuestion(questionId){
       localStorage.setItem('learn-js-user',JSON.stringify(user));
     }
     if(userInput == 'beginning'){
-      document.getElementById('question-2-message').innerHTML = 'The <code>.push()</code> function append data to the end of an array';
+      document.getElementById('question-2-message').innerHTML = 'The <code>.push()</code> function append data to the end of an array.';
       document.getElementById('question-2-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
     else{
       document.getElementById('question-2-message').innerHTML = 'Correct!';
       document.getElementById('question-2-message').className = 'success';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = -1;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
   }
   if(questionId == 3){
@@ -80,18 +118,63 @@ function checkQuestion(questionId){
       localStorage.setItem('learn-js-user',JSON.stringify(user));
     }
     if(userInput == 'beginning'){
-      document.getElementById('question-3-message').innerHTML = 'The <code>.pop()</code> function extracts the last element of an array';
+      document.getElementById('question-3-message').innerHTML = 'The <code>.pop()</code> function extracts the last element of an array.';
       document.getElementById('question-3-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
     else{
       document.getElementById('question-3-message').innerHTML = 'Correct!';
       document.getElementById('question-3-message').className = 'success';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = -1;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
+    }
+  }
+  if(questionId == 4){
+    var userInput = document.querySelector('input[name="question-4"]:checked').value;
+    if(user['arrays'] != 'completed'){
+      user['arrays-question-4'] = userInput;
+      localStorage.setItem('learn-js-user',JSON.stringify(user));
+    }
+    if(userInput == 'not-shift'){
+      document.getElementById('question-4-message').innerHTML = 'The <code>.unshift()</code> function inserts elements, instead of removing them.';
+      document.getElementById('question-4-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
+    }
+    if(userInput == 'not-at-end'){
+      document.getElementById('question-4-message').innerHTML = 'The <code>.unshift()</code> function does not insert elements at the end of the array.';
+      document.getElementById('question-4-message').className = 'failure';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
+    }
+    else{
+      document.getElementById('question-4-message').innerHTML = 'Correct!';
+      document.getElementById('question-4-message').className = 'success';
+      if(user['arraysMistakes'][questionId] == 0) {
+        user['arraysMistakes'][questionId] = -1;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
   }
   if(typeof user['arrays-question-0'] !== 'undefined' && typeof user['arrays-question-1'] !== 'undefined'
-  && typeof user['arrays-question-2'] !== 'undefined' && typeof user['arrays-question-3'] !== 'undefined')
+  && typeof user['arrays-question-2'] !== 'undefined' && typeof user['arrays-question-3'] !== 'undefined' &&
+  (typeof user['arrays-question-4'] !== 'undefined' || user['arraysEntryStereotype'] < 1250) )
     if(user['arrays-question-0'] == 'true' && user['arrays-question-1'] == 'true'
-    && user['arrays-question-2'] == 'true' && user['arrays-question-3'] == 'true') {
+    && user['arrays-question-2'] == 'true' && user['arrays-question-3'] == 'true'&&
+    (user['arrays-question-4'] == 'true' || user['arraysEntryStereotype'] < 1250) ) {
+      if(user['arrays'] != 'completed')  user['stereotype'] += 50;
       user['arrays'] = 'completed';
       if(user['conditionals'] == 'restricted')
         user['conditionals'] = 'available';
