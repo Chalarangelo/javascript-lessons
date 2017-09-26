@@ -19,7 +19,7 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;} input.numeric-input { margin: 0.5rem auto;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
-a.tooltip:hover { opacity: 1}
+a.tooltip:hover { opacity: 1} div[class*="advanced-"]{ display: none;}
 </style>
 </head>
 <body>
@@ -53,10 +53,21 @@ for (var i=0; i &lt; arr.length; i++) {
     <pre>var ourArray = [];
 var i = 0;
 while(i &lt; 5) {
-  ourArray.push(i)
+  ourArray.push(i);
   i++;
 }
-// The array now contains [0,1,2,3,4]</pre>
+// The array now contains [0,1,2,3,4]</pre><br/>
+<div class="advanced-1400">
+  <h2>Iterating with do...while loops</h2><hr>
+  <p>Apart from the while loop, you can also use the <strong>do...while loop</strong>. The only difference between the two is that in the second one the condition is evaluated after the loop's body is executed for the first time, instead of before.</p>
+  <pre>var ourArray = [];
+var i = 0;
+do {
+  ourArray.push(i);
+  i++;
+} while(i &lt; 5);
+// The array now contains [0,1,2,3,4]</pre><br/>
+</div>
   <div class="read-further">
     <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
     <ul>
@@ -132,7 +143,7 @@ while(i &lt; 5) {
     </div>
     <div class="card fluid rounded">
       <div class="input-group vertical">
-        <label for="question-3">4. Cosider the following code. After the loop stops executing what does the array <code>myArray</code> equal to ?<pre>var myArray = ["Simple","as"];<br>var i = 1;<br>while(i < 4) {<br>  myArray.push(i);<br>  i++;<br>}</pre></label>
+        <label for="question-3">4. Consider the following code. After the loop stops executing what does the array <code>myArray</code> equal to ?<pre>var myArray = ["Simple","as"];<br>var i = 1;<br>while(i < 4) {<br>  myArray.push(i);<br>  i++;<br>}</pre></label>
         <div class="input-group">
           <input type="radio" id="q3-1" tabindex="0" name="question-3" value="iteration">
           <label for="q3-1"><code>["Simple","as",1,2,3,4]</code></label>
@@ -147,6 +158,26 @@ while(i &lt; 5) {
         </div>
         <button class="primary" onclick="checkQuestion(3)">Check answer</button>
         <p id="question-3-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded advanced-1400">
+      <div class="input-group vertical">
+        <label for="question-4">5. Consider the following code:
+          <pre> var x = 0;<br/>do {<br/>  if (x == 0) x = 5;</br>  else x = 0;<br/>  console.log("Looping");<br/>} while(x &gt; 0);</pre> How many times will <code>Looping</code> will be printed?</label>
+        <div class="input-group">
+          <input type="radio" id="q4-1" tabindex="0" name="question-4" value="condition-at-end">
+          <label for="q4-1"><code>0</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q4-2" tabindex="0" name="question-4" value="condition-at-end">
+          <label for="q4-2"><code>1</code></label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q4-3" tabindex="0" name="question-4" value="true">
+          <label for="q4-3"><code>2</code></label>
+        </div>
+        <button class="primary" onclick="checkQuestion(4)">Check answer</button>
+        <p id="question-4-message"></p>
       </div>
     </div>
   </div>
