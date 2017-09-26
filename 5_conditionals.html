@@ -18,7 +18,7 @@ input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, 
 .input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
 p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
-iframe { margin: 0.5rem}
+iframe { margin: 0.5rem} div[class*="advanced-"]{ display: none;} a.tooltip:hover { opacity: 1}
 </style>
 </head>
 <body>
@@ -88,7 +88,20 @@ if (num &lt; 5) {
     <p>The above code will print <em>No</em> only if <code>num</code> is below <code>5</code> or above <code>10</code>. The same logic can be written as:</p>
     <pre>if (num &gt; 10 || num &lt; 5) {
   console.log("No");
+}</pre><br/>
+    <div class="advanced-1350">
+      <h2>Using the ternary operator</h2><hr>
+      <p>It is not uncommon to set a <a class="tooltip bottom" aria-label="View lesson" href="3_strings.html">variable's</a> value based on a condition. Instead of using an <code>if...else</code> statement, you can use the <strong>ternary</strong> <code>?</code> operator. For example, you can transform the following code:</p>
+      <pre>if (num &lt; 10) {
+  var x = "Under 10";
+}
+else {
+  var x = "Over 10";
 }</pre>
+    <p>To this, more compact form using the <code>?</code> operator:</p>
+    <pre>var x = (num &lt; 10) ? "Under 10" : "Over 10";</pre>
+    <br/>
+    </div>
     <div class="read-further">
       <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>&nbsp;&nbsp;Further reading</h3>
       <ul>
@@ -182,7 +195,7 @@ if (num &lt; 5) {
     </div>
     <div class="card fluid rounded">
       <div class="input-group vertical">
-        <label for="question-4">5. The following code will print <em>Take the bus!</em><pre>bus = 5;<br>if (bus < 3 || bus > 6 && bus < 8) {<br>  console.log("Take the bus!");<br>}</pre></label>
+        <label for="question-4">5. The following code will print <em>Take the bus!</em><pre>bus = 5;<br>if (bus < 3 || bus > 6 &amp;&amp; bus < 8) {<br>  console.log("Take the bus!");<br>}</pre></label>
         <div class="input-group">
           <input type="radio" id="q4-1" tabindex="0" name="question-4" value="false">
           <label for="q4-1">True</label>
@@ -193,6 +206,21 @@ if (num &lt; 5) {
         </div>
         <button class="primary" onclick="checkQuestion(4)">Check answer</button>
         <p id="question-4-message"></p>
+      </div>
+    </div>
+    <div class="card fluid rounded advanced-1350">
+      <div class="input-group vertical">
+        <label for="question-5">6. Consider the following code:<pre>var title = (married)?"Mrs":"Ms";</pre> What is the value of <code>title</code> if the value of <code>married</code> is <code>false</code>?</label>
+        <div class="input-group">
+          <input type="radio" id="q5-1" tabindex="0" name="question-5" value="false">
+          <label for="q5-1">Mrs</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="q5-2" tabindex="0" name="question-5" value="true">
+          <label for="q5-2">Ms</label>
+        </div>
+        <button class="primary" onclick="checkQuestion(5)">Check answer</button>
+        <p id="question-5-message"></p>
       </div>
     </div>
   </div>

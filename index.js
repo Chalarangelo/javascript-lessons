@@ -74,7 +74,7 @@ function advanceQuestion(){
       'arraysEntryStereotype' : -1,
       'arraysMistakes' : [0,0,0,0,0],
       'conditionalsEntryStereotype' : -1,
-      'conditionalsMistakes' : [0,0,0,0,0],
+      'conditionalsMistakes' : [0,0,0,0,0,0],
       'loopsEntryStereotype' : -1,
       'loopsMistakes' : [0,0,0,0,0],
       'chapter1EntryStereotype' : -1,
