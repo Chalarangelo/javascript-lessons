@@ -77,14 +77,22 @@ function advanceQuestion(){
       'conditionalsMistakes' : [0,0,0,0,0,0],
       'loopsEntryStereotype' : -1,
       'loopsMistakes' : [0,0,0,0,0],
-      'chapter1EntryStereotype' : -1,
       'chapter1Score' : -1,
-      'chapter2EntryStereotype' : -1,
+      'chapter1VariablesScore' : -1,
+      'chapter1ExpressionsScore' : -1,
       'chapter2Score' : -1,
-      'chapter3EntryStereotype' : -1,
+      'chapter2StringsScore' : -1,
+      'chapter2ArraysScore' : -1,
       'chapter3Score' : -1,
-      'reviewEntryStereotype' : -1,
-      'reviewScore' : -1
+      'chapter3ConditionalsScore' : -1,
+      'chapter3LoopsScore' : -1,
+      'reviewScore' : -1,
+      'reviewVariablesScore' : -1,
+      'reviewExpressionsScore' : -1,
+      'reviewStringsScore' : -1,
+      'reviewArraysScore' : -1,
+      'reviewConditionalsScore' : -1,
+      'reviewLoopsScore' : -1
     }
     localStorage.setItem('learn-js-user', JSON.stringify(user));
     location.reload();

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.3/dist/mini-default.min.css">
+<title>Chapter 1 Quiz</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="./favicon.png">
+<style>mark.JS{background: #f0db4f; color: #323232; font-weight: 700; margin-left: 0.5rem; padding: 0.125rem 0.25em;}
+.container{height: calc(100vh - 48px); overflow: auto; overflow-x: hidden}
+header a#back-button svg { vertical-align: middle;}
+header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
+  left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
+header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+@media screen and (min-width:768px){ .col-sm-12 { height: calc(100vh - 48px); overflow: auto; overflow-x: hidden} .col-sm-12 + .col-sm-12 {border-left: 1px solid #c9c9c9; }}
+.card.fluid.rounded{border: none; margin-top: 1.25rem;}
+input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, monospace; margin: 0.5rem; border: 1px solid #212121; }
+.input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
+p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.failure{ background: #e53935; color: #fafafa; padding: 0.5rem; border-radius: 2px;} p.success code, p.failure code { color: #212121;}
+div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
+iframe { margin: 0.5rem}
+div[class*="advanced-"]{ display: none;}
+</style>
+</head>
+<body>
+  <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
+  <div class="container"><div class="row">
+<div class="col-sm-12">
+  <h2>Chapter 1 Quiz</h2>
+  <hr>
+  <p>Answer all the question below, then click on <strong>Submit</strong> to see your results.</p>
+    <span id="questions"></span>
+    <button class="primary" onclick="checkQuestions();" style="width:100%" id="submitButton">Submit</button><br/>
+    <span id="results"></span>
+</div>
+</div></div>
+<script src="chapter1.js"></script>
+
+</body>
+</html>
