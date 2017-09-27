@@ -205,6 +205,8 @@ function checkQuestion(questionId){
     else{
       document.getElementById('question-5-message').innerHTML = 'Correct!';
       document.getElementById('question-5-message').className = 'success';
+      user['stringsEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user', JSON.stringify(user));
       if(user['stringsMistakes'][4] == 0) {
         user['stringsMistakes'][4] = -1;
         localStorage.setItem('learn-js-user', JSON.stringify(user));

@@ -162,6 +162,8 @@ function checkQuestion(questionId){
     else{
       document.getElementById('question-4-message').innerHTML = 'Correct!';
       document.getElementById('question-4-message').className = 'success';
+      user['arraysEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user', JSON.stringify(user));
       if(user['arraysMistakes'][questionId] == 0) {
         user['arraysMistakes'][questionId] = -1;
         localStorage.setItem('learn-js-user', JSON.stringify(user));

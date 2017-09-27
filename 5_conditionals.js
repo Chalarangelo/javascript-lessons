@@ -170,10 +170,21 @@ function checkQuestion(questionId){
     if(userInput == 'false'){
       document.getElementById('question-5-message').innerHTML = 'The first part of the statement is applied only if the condition evaluates to true.';
       document.getElementById('question-5-message').className = 'failure';
+      if(user['conditionalsMistakes'][questionId] == 0) {
+        user['conditionalsMistakes'][questionId] = 1;
+        user['stereotype'] -= 5;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
     else{
       document.getElementById('question-5-message').innerHTML = 'Correct!';
       document.getElementById('question-5-message').className = 'success';
+      user['conditionalsEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user', JSON.stringify(user));
+      if(user['conditionalsMistakes'][questionId] == 0) {
+        user['conditionalsMistakes'][questionId] = -1;
+        localStorage.setItem('learn-js-user', JSON.stringify(user));
+      }
     }
   }
   if(typeof user['conditionals-question-0'] !== 'undefined' && typeof user['conditionals-question-1'] !== 'undefined'

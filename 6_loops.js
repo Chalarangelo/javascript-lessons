@@ -171,6 +171,8 @@ function checkQuestion(questionId){
     else{
       document.getElementById('question-3-message').innerHTML = 'Correct!';
       document.getElementById('question-3-message').className = 'success';
+      user['loopsEntryStereotype'] = user['stereotype'];
+      localStorage.setItem('learn-js-user', JSON.stringify(user));
       if(user['loopsMistakes'][questionId] == 0) {
         user['loopsMistakes'][questionId] = -1;
         localStorage.setItem('learn-js-user', JSON.stringify(user));
