@@ -96,8 +96,8 @@ function checkQuestions(){
     user['stereotype'] += 50;
   }
   user['chapter2Score'] = (user['chapter2Score'] > currentScore) ? user['chapter2Score'] : currentScore;
-  user['chapter2stringsScore'] = (user['chapter2stringsScore'] > (stringsCorrect / 5 * 100)) ? user['chapter2stringsScore'] : stringsCorrect / 5 * 100;
-  user['chapter2arraysScore'] = ( user['chapter2arraysScore'] > (arraysCorrect / 5 * 100)) ? user['chapter2arraysScore'] : arraysCorrect / 5 * 100 ;
+  user['chapter2StringsScore'] = (user['chapter2StringsScore'] > (stringsCorrect / 5 * 100)) ? user['chapter2StringsScore'] : stringsCorrect / 5 * 100;
+  user['chapter2ArraysScore'] = ( user['chapter2ArraysScore'] > (arraysCorrect / 5 * 100)) ? user['chapter2ArraysScore'] : arraysCorrect / 5 * 100 ;
   localStorage.setItem('learn-js-user',JSON.stringify(user));
   document.getElementById('submitButton').setAttribute('disabled','true');
 }
