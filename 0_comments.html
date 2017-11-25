@@ -7,17 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/png" href="./favicon.png">
 <style>mark.JS{background: #f0db4f; color: #323232; font-weight: 700; margin-left: 0.5rem; padding: 0.125rem 0.25em;}
-.container{height: calc(100vh - 48px); overflow: auto; overflow-x: hidden}
+.container{height: calc(100vh - 108px); overflow: auto; overflow-x: hidden}
 header a#back-button svg { vertical-align: middle;}
 header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
   left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
 header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
 div[class*="-further"]{ display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
+header a#next-button svg { vertical-align: middle }
+header a#next-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
+  right: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none;}
+header a#next-button:hover, header a#next-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+footer{ padding-top: 0.5rem; margin: 0}
 </style>
 </head>
 <body>
-  <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
+  <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><a id="next-button" href="./1_variables.html">Next&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg></a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
   <div class="container"><div class="row"><div class="col-sm-12 col-md-10 col-md-offset-1">
     <br/>
     <h2>Comment your JavaScript Code</h2><hr>
@@ -45,6 +50,7 @@ iframe { margin: 0.5rem}
       <br/><br/>
     </div>
   </div></div></div>
+  <footer><div class="row"><div class="col-sm-12 footer"><p>&copy; Learn Javascript 2017</div></div></footer>
   <script src="0_comments.js"></script>
 </body>
 </html>

@@ -107,6 +107,7 @@ function updateUserMenu(){
   updateMenuItem('arrays');
   updateMenuItem('conditionals');
   updateMenuItem('loops');
+  updateTestItems();
 }
 
 function updateMenuItem(name){
@@ -128,6 +129,67 @@ function updateMenuItem(name){
       document.getElementById('menu-'+name).innerHTML = restrictedIcon;
       document.getElementById('menu-'+name).setAttribute('aria-label', 'Restricted');
       break;
+  }
+}
+
+function updateTestItems(){
+  if(user['chapter1Score'] >= 60){
+    document.getElementById('test-chapter-1').innerHTML = completedIcon;
+    document.getElementById('test-chapter-1').setAttribute('aria-label', 'Completed');
+  }
+  else if(user['variables'] == 'completed' && user['expressions'] == 'completed'){
+    document.getElementById('test-chapter-1').innerHTML = availableIcon;
+    document.getElementById('test-chapter-1').setAttribute('aria-label', 'Available');
+  }
+  else {
+    document.getElementById('test-chapter-1').innerHTML = restrictedIcon;
+    document.getElementById('test-chapter-1').setAttribute('aria-label', 'Restricted');
+  }
+  if(user['chapter2Score'] >= 60){
+    document.getElementById('test-chapter-2').innerHTML = completedIcon;
+    document.getElementById('test-chapter-2').setAttribute('aria-label', 'Completed');
+  }
+  else if(user['strings'] == 'completed' && user['arrays'] == 'completed'){
+    document.getElementById('test-chapter-2').innerHTML = availableIcon;
+    document.getElementById('test-chapter-2').setAttribute('aria-label', 'Available');
+  }
+  else {
+    document.getElementById('test-chapter-2').innerHTML = restrictedIcon;
+    document.getElementById('test-chapter-2').setAttribute('aria-label', 'Restricted');
+  }
+  if(user['chapter3Score'] >= 60){
+    document.getElementById('test-chapter-3').innerHTML = completedIcon;
+    document.getElementById('test-chapter-3').setAttribute('aria-label', 'Completed');
+  }
+  else if(user['conditionals'] == 'completed' && user['loops'] == 'completed'){
+    document.getElementById('test-chapter-3').innerHTML = availableIcon;
+    document.getElementById('test-chapter-3').setAttribute('aria-label', 'Available');
+  }
+  else {
+    document.getElementById('test-chapter-3').innerHTML = restrictedIcon;
+    document.getElementById('test-chapter-3').setAttribute('aria-label', 'Restricted');
+  }
+  if(user['reviewScore'] >= 60){
+    document.getElementById('test-review').innerHTML = completedIcon;
+    document.getElementById('test-review').setAttribute('aria-label', 'Completed');
+  }
+  else if(user['variables'] == 'completed' && user['expressions'] == 'completed' &&
+    user['strings'] == 'completed' && user['arrays'] == 'completed' &&
+    user['conditionals'] == 'completed' && user['loops'] == 'completed'){
+    document.getElementById('test-review').innerHTML = availableIcon;
+    document.getElementById('test-review').setAttribute('aria-label', 'Available');
+  }
+  else {
+    document.getElementById('test-review').innerHTML = restrictedIcon;
+    document.getElementById('test-review').setAttribute('aria-label', 'Restricted');
+  }
+  if(user['chapter1Score'] != -1 || user['chapter2Score'] != -1 || user['chapter3Score'] != -1 || user['reviewScore'] != -1){
+    document.getElementById('test-statistics').innerHTML = availableIcon;
+    document.getElementById('test-statistics').setAttribute('aria-label', 'Available');
+  }
+  else {
+    document.getElementById('test-statistics').innerHTML = restrictedIcon;
+    document.getElementById('test-statistics').setAttribute('aria-label', 'Restricted');
   }
 }
 

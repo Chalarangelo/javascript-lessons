@@ -7,12 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/png" href="./favicon.png">
 <style>mark.JS{background: #f0db4f; color: #323232; font-weight: 700; margin-left: 0.5rem; padding: 0.125rem 0.25em;}
-.container{height: calc(100vh - 48px); overflow: auto; overflow-x: hidden}
+.container{height: calc(100vh - 108px); overflow: auto; overflow-x: hidden}
 header a#back-button svg { vertical-align: middle;}
 header a#back-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
   left: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none; }
 header a#back-button:hover, header a#back-button:focus { background: #323232; color: #fafafa; opacity: 1; }
-@media screen and (min-width:768px){ .col-sm-12 { height: calc(100vh - 48px); overflow: auto; overflow-x: hidden} .col-sm-12 + .col-sm-12 {border-left: 1px solid #c9c9c9; }}
+@media screen and (min-width:768px){ .col-sm-12:not(.footer) { height: calc(100vh - 108px); overflow: auto; overflow-x: hidden} .col-sm-12 + .col-sm-12 {border-left: 1px solid #c9c9c9; }}
 .card.fluid.rounded{border: none; margin-top: 1.25rem;}
 input.input-code { background: #212121; color: #f0f0f0; font-family: monospace, monospace; margin: 0.5rem; border: 1px solid #212121; }
 .input-group.vertical .input-group { padding: 0.25rem 0.5rem;} .input-group.vertical .input-group + button { margin-top: 0.25rem;}
@@ -20,10 +20,15 @@ p.success{ background: #689f38; color: #fafafa; padding: 0.5rem; border-radius: 
 div[class*="-further"], li[class*="-further"] { display: none;} h3 svg { vertical-align: bottom; }
 iframe { margin: 0.5rem}
 div[class*="advanced-"]{ display: none;} a.tooltip:hover { opacity: 1}
+header a#next-button svg { vertical-align: middle }
+header a#next-button { line-height: 1; font-size: 0.875em; text-transform: uppercase; position: fixed; top: 0.25rem;
+  right: 0.5rem; padding: 0.5rem; border-radius: 2px; cursor: pointer; transition: background 0.3s; color: #fafafa; text-decoration: none;}
+header a#next-button:hover, header a#next-button:focus { background: #323232; color: #fafafa; opacity: 1; }
+footer{ padding-top: 0.5rem; margin: 0}
 </style>
 </head>
 <body>
-  <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
+  <header style="text-align: center;"><a id="back-button" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>&nbsp;Back</a><a id="next-button" href="./4_arrays.html">Next&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg></a><h1 class="logo">Learn<mark class="JS">JS</mark></h1></header>
   <div class="container"><div class="row"><div class="col-sm-12 col-md-6">
     <h2>Declare String Variables</h2><hr>
     <p>Previously we have used the following code:</p>
@@ -177,6 +182,7 @@ var ageString = "I am " + age + " years old.";</pre>
     </div>
   </div>
 </div></div>
-  <script src="3_strings.js"></script>
+<footer><div class="row"><div class="col-sm-12 footer"><p>&copy; Learn Javascript 2017</div></div></footer>
+<script src="3_strings.js"></script>
 </body>
 </html>
